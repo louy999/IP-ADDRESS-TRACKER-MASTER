@@ -1,0 +1,117 @@
+//color
+$Very-Dark-Gray: hsl(0, 0%, 17%);
+$Dark-Gray: hsl(0, 0%, 59%);
+// font
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+//root
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  > img {
+    position: absolute;
+    top: 0;
+    // display: none;
+    z-index: -55;
+    height: 25vh;
+    width: 100vw;
+  }
+  header {
+    width: 45%;
+    margin: 20px auto;
+    h3 {
+      color: white;
+      font-size: 25px;
+      text-align: center;
+    }
+    div {
+      width: 100%;
+      input {
+        width: 80%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 14px;
+      }
+      img {
+        background-color: black;
+        cursor: pointer;
+        padding: 12px;
+        position: relative;
+        left: -4px;
+        top: 15px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        //   width: 10px;
+      }
+    }
+  }
+}
+
+//for map
+#map {
+  height: 75vh;
+}
+
+//information
+.info {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  position: absolute;
+  z-index: 545;
+  width: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 10px;
+  height: 70px;
+  align-items: center;
+  top: 20vh;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: %;
+    flex-wrap: wrap;
+    border-right: 1px solid $Very-Dark-Gray;
+    padding: 10px;
+    &:last-child {
+      border: none;
+    }
+    span:first-child {
+      color: $Dark-Gray;
+    }
+    span:last-child {
+      color: $Very-Dark-Gray;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #container header h3 {
+    font-size: 18px;
+  }
+  #container header div input {
+    font-size: 10px;
+    width: 70%;
+  }
+  #container header div img {
+    padding: 10px;
+  }
+  .info {
+    padding: 0;
+  }
+  .info > div span:first-child {
+    font-size: 10px;
+  }
+  .info > div span:last-child {
+    font-size: 10px;
+  }
+}
