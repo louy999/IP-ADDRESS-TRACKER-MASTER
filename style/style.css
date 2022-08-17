@@ -82,7 +82,7 @@
   color: hsl(0deg, 0%, 17%);
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   #container header h3 {
     font-size: 18px;
   }
